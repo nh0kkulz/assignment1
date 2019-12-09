@@ -1,0 +1,52 @@
+    <header>
+        <nav class="navbar ">
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <a href="/" class="navbar-brand"><i class="fab fa-airbnb fa-2x"></i></a>
+            </div>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                {{#if user}}
+                    <a href="/user/logout" class="navlink">Logout</a></li>
+                    {{#if admin}}
+                        <a href="/room/add" class="navlink">Create Room</a>
+                        <a href="/room/list" class="navlink">Your Room</a>
+                    {{/if}}
+                {{else}}
+                    <a href="/user/login" class="navlink">Login</a>
+                    <a href="/user/registration" class="navlink">Registration</a>
+                {{/if}}
+                <a href="/room/roomlisting" class="navlink">Room Listing</a>
+            </div>
+        </nav>
+        <div class="bookingForm">
+            <form action="/room/search" class="form-container" method="POST">
+                <h2>Book unique places to stay and things to do.</h2>
+                <label for="email"><b>Where</b></label>
+                <input list="locations" name="myBrowser" placeholder="Anywhere" />
+                <select id="locations" name="locations">
+                    <option value="Toronto">Toronto</option>
+                    <option value="Ottawa">Ottawa</option>
+                    <option value="Hamilton">Hamilton</option>
+                    <option value="London">London</option>
+                    <option value="Oshawa">Oshawa</option>
+                    <option value="Windsor">Windsor</option>
+                </select>
+
+                <div class="dateInputs">
+                    <label><b>Check-in</b></label>
+                    <label><b>Checkout</b></label>
+                    <input type="date">
+                    <input type="date">
+                </div>
+
+                <label for="psw"><b>Guests</b></label>
+                <br>
+                <select>
+                    <option value="1 guest">1 guest</option>
+                    <option value="2 guests">2 guest</option>
+                    <option value="3 guests">3 guest</option>
+                    <option value="4 guests">4 guest</option>
+                </select>
+                <button type="submit" class="btn search" onclick="closeForm()">Search</button>
+            </form>
+        </div>
+    </header>

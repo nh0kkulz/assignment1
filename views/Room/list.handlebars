@@ -1,0 +1,18 @@
+<section id="roomlisting">
+    <div id="line">
+        {{#each room}}
+        <div class="room">
+            <img src="/upload/{{this.profilePic}}" class="room">
+            <h1>{{this.title}}</h1>
+            <p>{{this.price}}</p>
+            <p>{{this.description}}</p>
+            <p>{{this.location}}</p>
+            <a href="/room/edit/{{this._id}}">Edit</a>&nbsp;&nbsp;
+            <form id="deleteButtonForm" method="POST" action="/room/delete/{{this._id}}?_method=DELETE">
+                <input type="submit" value="Delete" class="delButtons" data-id="{{this.id}}"
+                    data-title="{{this.title}}">
+            </form>
+        </div>
+        {{/each}}
+    </div>
+</section>

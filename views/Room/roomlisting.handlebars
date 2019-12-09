@@ -1,0 +1,13 @@
+<section id="roomlisting">
+    <div id="line">
+        {{#each room}}
+            <div class="room">
+                <img src="/upload/{{this.profilePic}}" class="room">
+                <h1>{{this.title}}</h1>
+                <p>{{this.price}}</p>
+                <p>{{this.description}}</p>
+                <p>{{this.location}}</p>
+            </div>
+        {{/each}}
+    </div>
+</section>

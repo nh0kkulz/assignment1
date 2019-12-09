@@ -1,0 +1,14 @@
+<div class="signUpForm">
+    <form method="POST" action="/room/edit/{{roomDocument._id}}/?_method=PUT" class="form-container" enctype="multipart/form-data">
+        {{#each message}}
+            <div class="errors">{{this}}</div>
+        {{/each}}
+        <h1>EDIT ROOM</h1>
+        <input type="text" placeholder="Title" name="title" id="title" value="{{roomDocument.title}}">
+        <input type="text" placeholder="Description" name="description" id="description" value="{{roomDocument.description}}">
+        <input type="number" placeholder="Price" name="price" id="price" value="{{roomDocument.price}}">
+        <input type="text" placeholder="Location" name="location" id="location" value="{{roomDocument.location}}">
+        <input type="file" name="profilePic" value="Add a picture">
+        <input type="submit" value="Confirm" class="btn signup">
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="signUpForm">
+    <form method="POST" action="/room/add" class="form-container" enctype="multipart/form-data">
+        {{#each message}}
+            <div class="errors">{{this}}</div>
+        {{/each}}
+        <h1>CREATE ROOM</h1>
+        <input type="text" placeholder="Title" name="title" id="title">
+        <input type="text" placeholder="Description" name="description" id="description">
+        <input type="number" placeholder="Price" name="price" id="price">
+        <input type="text" placeholder="Location" name="location" id="location">
+        <input type="file" name="profilePic" value="Add a picture">
+        <input type="submit" value="Add room" class="btn signup">
+    </form>
+</div>

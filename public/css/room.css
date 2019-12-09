@@ -1,0 +1,27 @@
+#line
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 70px;
+}
+
+.room
+{
+    height: 300px;
+    width: 400px;
+    padding: 2rem;
+}
+
+#roomlisting
+{
+    text-align: left;
+    margin: 100px auto;
+    max-width: 1440px;
+    padding: 5rem;
+    height: 100vh;
+}
+
+#roomlisting h1
+{
+    font-size: 24px;
+}

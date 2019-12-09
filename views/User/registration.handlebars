@@ -1,0 +1,18 @@
+<div class="signUpForm">
+    <form method="POST" action="/user/registration" class="form-container" enctype="multipart/form-data">
+        {{#each message}}
+            <div class="errors">{{this}}</div>
+        {{/each}}
+        <h1>REGISTRATION</h1>
+        <input type="email" placeholder="Email address" name="email">
+        <input type="text" placeholder="First name" name="firstname">
+        <input type="text" placeholder="Last name" name="lastname">
+        <input type="password" placeholder="Create a Password" name="password">
+        <input type="password" placeholder="Confirm Password" name="confirm">
+        <label>Birthday</label>
+        <label>To sign up, you need to be at least 18. Other people who use Airbnb won't see your birthday.</label>
+        <input type="date" name="birthday">
+        <label>We'll send you marketing promotions, special offers, inspiration, and policy updates via email.</label>
+        <input type="submit" value="Sign Up" class="btn signup">
+    </form>
+</div>

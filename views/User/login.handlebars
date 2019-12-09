@@ -1,0 +1,9 @@
+<form method="POST" action="/user/login" class="form-container">
+    {{#each message}}
+        <div class="errors">{{this}}</div>
+    {{/each}}
+    <h1>Login</h1>
+    <input name="email" type="email" placeholder="Email address">
+    <input name="password" type="password" placeholder="Password">
+    <input type="submit" value="Log in">
+</form>
